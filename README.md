@@ -46,11 +46,11 @@ scripts/          Helper scripts
 
 ## Stack
 
-- **Frontend:** Next.js 14, React, Tailwind CSS, shadcn/ui
+- **Frontend:** Next.js 14, React, Tailwind CSS
 - **Backend:** Node.js, Next.js API routes
 - **Database:** PostgreSQL 16 + Prisma ORM
 - **Auth:** NextAuth.js (email/password)
-- **DnD:** @hello-pangea/dnd (drag-and-drop)
+- **DnD:** @hello-pangea/dnd
 
 ## API Routes
 
