@@ -46,11 +46,11 @@ scripts/          Helper scripts
 
 ## Stack
 
-- **Frontend:** Next.js 14, React, Tailwind CSS
+- **Frontend:** Next.js 14, React, Tailwind CSS, shadcn/ui
 - **Backend:** Node.js, Next.js API routes
 - **Database:** PostgreSQL 16 + Prisma ORM
 - **Auth:** NextAuth.js (email/password)
-- **DnD:** @hello-pangea/dnd
+- **DnD:** @hello-pangea/dnd (drag-and-drop)
 
 ## API Routes
 
@@ -89,6 +89,22 @@ Reset database:
 docker compose down -v
 docker compose up --build
 ```
+
+## Troubleshooting
+
+### Docker issues
+
+**Container won't start**: Check logs with `docker logs devtrack_app`. Ensure Docker Desktop is running.
+
+**Database connection error**: Run `docker compose down -v` to reset, then `docker compose up --build`.
+
+**Port already in use**: Change ports in `docker-compose.yml` if 3000 or 5432 are taken.
+
+### Database
+
+**Migration failed**: Run `docker exec devtrack_app npx prisma migrate deploy`.
+
+**Seed data missing**: Run `docker exec devtrack_app npx ts-node --compiler-options '{"module":"CommonJS"}' prisma/seed.ts`.
 
 ## Deployment
 
